@@ -1,12 +1,10 @@
 
 def my_collect(array)
   i = 0
-
+  caps = []
   while i < array.length
-    yield array[i]
-    array.upcase
-    i = i + 1
+    caps << yield array.upcase[i]
+    i += 1
   end
-
-  array
+  caps
 end
